@@ -1,0 +1,22 @@
+{
+    "name": "evoxlab/module-checkout-labels",
+    "description": "Adiciona rótulos e placeholders aos campos de endereço de cobrança e entrega no checkout.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Evoxlab\\CheckoutLabels\\": ""
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": "*",
+        "magento/module-checkout": "*"
+    }
+}
