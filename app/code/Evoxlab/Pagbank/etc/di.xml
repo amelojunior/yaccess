@@ -5,6 +5,6 @@
 
     <type name="PagBank\PaymentMagento\Model\Api\Credential">
         <plugin name="evoxlab_pagbank_fix_redirect_url"
-                type="Evoxlab\Pagbank\Plugin\Model\Api\CredentialPlugin" />
+                type="Evoxlab\Pagbank\Plugin\CredentialPlugin" />
     </type>
 </config>

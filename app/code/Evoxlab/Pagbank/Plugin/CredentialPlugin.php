@@ -1,5 +1,5 @@
 <?php
-namespace Evoxlab\Pagbank\Plugin\Model\Api;
+namespace Evoxlab\Pagbank\Plugin;
 
 use Magento\Backend\Model\UrlInterface;
 use Magento\Framework\Serialize\Serializer\Json;
