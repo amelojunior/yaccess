@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Plugin para corrigir a URL de redirect do PagBank -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="PagBank\PaymentMagento\Model\Api\Credential">
+        <plugin name="evoxlab_pagbank_fix_redirect_url"
+                type="Evoxlab\Pagbank\Plugin\Model\Api\CredentialPlugin" />
+    </type>
+</config>
