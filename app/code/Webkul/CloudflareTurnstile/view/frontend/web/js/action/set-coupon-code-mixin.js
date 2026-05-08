@@ -8,20 +8,38 @@
  * @license   https://store.webkul.com/license.html
  */
 
-define([], function () {
+define([
+    'mage/utils/wrapper'
+], function (wrapper) {
     'use strict';
 
+    var addTurnstileHeader = function (headers) {
+        if (window.checkoutConfig &&
+            window.checkoutConfig.turnstileConfigData &&
+            window.checkoutConfig.turnstileConfigData.isCaptchaEnableForCouponCode == 1 &&
+            window.turnstileCheckotCouponToken
+        ) {
+            headers['X-Cf-Turnstile-Response'] = window.turnstileCheckotCouponToken;
+        }
+    };
+
     return function (setCouponCodeAction) {
-        setCouponCodeAction.registerDataModifier(function (headers) {
-            if (window.checkoutConfig &&
-                window.checkoutConfig.turnstileConfigData &&
-                window.checkoutConfig.turnstileConfigData.isCaptchaEnableForCouponCode == 1 &&
-                window.turnstileCheckotCouponToken
-            ) {
-                headers['X-Cf-Turnstile-Response'] = window.turnstileCheckotCouponToken;
-            }
+        var wrappedAction;
+
+        if (typeof setCouponCodeAction.registerDataModifier === 'function') {
+            setCouponCodeAction.registerDataModifier(addTurnstileHeader);
+
+            return setCouponCodeAction;
+        }
+
+        wrappedAction = wrapper.wrap(setCouponCodeAction, function (originalAction, couponCode, isApplied) {
+            return originalAction(couponCode, isApplied);
         });
 
-        return setCouponCodeAction;
+        Object.keys(setCouponCodeAction).forEach(function (key) {
+            wrappedAction[key] = setCouponCodeAction[key];
+        });
+
+        return wrappedAction;
     };
 });

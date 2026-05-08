@@ -14,7 +14,7 @@ define([
     'use strict';
 
     return function (loginAction) {
-        return wrapper.wrap(loginAction, function (originalAction, loginData, redirectUrl, isGlobal, messageContainer) {
+        var wrappedAction = wrapper.wrap(loginAction, function (originalAction, loginData, redirectUrl, isGlobal, messageContainer) {
             if (window.checkoutConfig &&
                 window.checkoutConfig.turnstileConfigData &&
                 window.checkoutConfig.turnstileConfigData.isCaptchaEnableForLogin == 1 &&
@@ -25,5 +25,11 @@ define([
 
             return originalAction(loginData, redirectUrl, isGlobal, messageContainer);
         });
+
+        Object.keys(loginAction).forEach(function (key) {
+            wrappedAction[key] = loginAction[key];
+        });
+
+        return wrappedAction;
     };
 });
