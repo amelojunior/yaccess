@@ -1,0 +1,43 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_CloudflareTurnstile
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+$moduleversion = $block->getModuleVeriosn();
+?>
+<tr id ="row_wk_mpauction_mpauction_information_author">
+    <td colspan="4">
+        <h4>
+            <p><?= $block->escapeHtml(__('Author:')); ?> 
+                <a target='_blank' title='<?= $block->escapeHtml(__('Webkul Software Private Limited'));?>'
+                href='<?= $block->escapeHtml("https://webkul.com/");?>' >
+                <?= $block->escapeHtml(__('Webkul'));?></a></p>
+                <p><?= $block->escapeHtml(__('User Guide:')); ?> 
+                <a target='_blank' href='<?= $block->escapeHtml(
+                    'https://webkul.com/blog/magento2-cloudflare-turnstile/'
+                ) ?>' >
+                <?= $block->escapeHtml(__('Click here')) ?></a></p>
+                <p><?= $block->escapeHtml(__('Store Extension:')); ?> 
+                <a target='_blank' href='<?= $block->escapeHtml(
+                    'https://store.webkul.com/cloudflare-turnstile-for-magento-2.html'
+                );?>' >
+                <?= $block->escapeHtml(__('Click here'));?></a></p>
+                <p><?= $block->escapeHtml(__('Ticket/Customisations:')); ?> 
+                <a target='_blank' href='<?= $block->escapeHtml(
+                    'https://webkul.uvdesk.com/en/customer/create-ticket/'
+                );?>' >
+                <?= $block->escapeHtml(__('Click here'));?></a></p>
+                <p><?= $block->escapeHtml(__('Services:')); ?>
+                <a target='_blank' href='<?= $block->escapeHtml('https://webkul.com/magento-development/');?>' >
+                <?= $block->escapeHtml(__('Click here'));?></a></p>
+                <p><?= $block->escapeHtml(__('Version: %1', $moduleversion));?>
+                </p>
+                
+        </h4>
+    </td>
+</tr>

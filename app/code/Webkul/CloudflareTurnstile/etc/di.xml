@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_CloudflareTurnstile
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Webkul\CloudflareTurnstile\Api\ValidateTurnstileInterface" type="Webkul\CloudflareTurnstile\Model\ValidateTurnstile" />
+    <type name="\Magento\Customer\Model\AccountManagement">
+        <plugin name="webkul_cloudflare_turnstilevalidation_before_login" type="Webkul\CloudflareTurnstile\Plugin\LoginPost" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Model\PaymentInformationManagement">
+        <plugin name="webkul_cloudflare_turnstile_place_order" type="Webkul\CloudflareTurnstile\Plugin\Checkout\PaymentInformationManagementPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Model\GuestPaymentInformationManagement">
+        <plugin name="webkul_cloudflare_turnstile_guest_place_order" type="Webkul\CloudflareTurnstile\Plugin\Checkout\GuestPaymentInformationManagementPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Quote\Model\CouponManagement">
+        <plugin name="webkul_cloudflare_turnstile_coupon" type="Webkul\CloudflareTurnstile\Plugin\Quote\CouponManagementPlugin" sortOrder="1" />
+    </type>
+    <!-- set value for checkout_index_index page -->
+    <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="webkul_cloudflare_turnstile_site_key" type="Webkul\CloudflareTurnstile\Plugin\DefaultConfigProviderPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Customer\Controller\Ajax\Login">
+        <plugin name="turnstile_validation" type="Webkul\CloudflareTurnstile\Plugin\Model\Customer\Plugin\AjaxLogin" sortOrder="60" />
+    </type>
+</config>

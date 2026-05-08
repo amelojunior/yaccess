@@ -1,0 +1,35 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_CloudflareTurnstile
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+
+?>
+<tr id ="row_wk_mpauction_mpauction_information_author">
+    <td colspan="4">
+        <h4>
+            <?= $block->escapeHtml(__('Add using reference block:')); ?> 
+            <p style="font-size: small;">
+                <?= $block->escapeHtml(
+                    '<block class="Webkul\CloudflareTurnstile\Block\Turnstile" 
+                    name="productreviewcloudflarecaptcha" after="-" > 
+                    </block>'
+                );
+            ?>
+            </p> 
+        </h4>
+        
+        <h4>
+            <?= $block->escapeHtml(__('Add in CMS pages:')); ?> 
+            <p style="font-size: small;">
+                <?= $block->escapeHtml('{{block class="Webkul\CloudflareTurnstile\Block\Turnstile"}}');?>
+            </p> 
+        </h4>
+    </td>
+</tr>

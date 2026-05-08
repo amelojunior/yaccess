@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_CloudflareTurnstile
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script  src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer="defer" async="async" src_type="url"/>
+    </head>
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="authentication" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="turnstile" xsi:type="array">
+                                            <item name="component" xsi:type="string">Webkul_CloudflareTurnstile/js/view/checkout/loginTurnstile</item>
+                                            <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
+                                            <item name="formId" xsi:type="string">user_login</item>
+                                            <item name="configSource" xsi:type="string">checkoutConfig</item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                         <item name="beforeMethods" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="place-order-turnstile-container" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">uiComponent</item>
+                                                                    <item name="displayArea" xsi:type="string">beforeMethods</item>
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="place-order-turnstile" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Webkul_CloudflareTurnstile/js/turnstile</item>
+                                                                            <item name="displayArea" xsi:type="string">place-order-turnstile</item>
+                                                                            <item name="configSource" xsi:type="string">checkoutConfig</item>
+                                                                            <item name="turnstileId" xsi:type="string">turnstile-checkout-place-order</item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                         <!-- <item name="afterMethods" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="couponcode-order-discount" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">uiComponent</item>
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="couponcode-order-turnstile" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Webkul_CloudflareTurnstile/js/coupon/turnstile</item>
+                                                                            <item name="displayArea" xsi:type="string">captcha</item>
+                                                                            <item name="formId" xsi:type="string">couponcode-order-turnstile-request</item>
+                                                                            <item name="configSource" xsi:type="string">checkoutConfig</item>
+                                                                            <item name="turnstileId" xsi:type="string">trunstile-checkout-coupon-apply</item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item> -->
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="customer-email" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="additional-login-form-fields" xsi:type="array">
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="turstile" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Webkul_CloudflareTurnstile/js/view/shipping/loginTurnstile</item>
+                                                                            <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
+                                                                            <item name="formId" xsi:type="string">user_login</item>
+                                                                            <item name="configSource" xsi:type="string">checkoutConfig</item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

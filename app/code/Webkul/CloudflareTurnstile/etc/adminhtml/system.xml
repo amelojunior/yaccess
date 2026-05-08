@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_CloudflareTurnstile
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="cloudflareturnstile" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>CloudFlare Turnstile</label>
+            <tab>security</tab>
+            <resource>Webku l_CloudflareTurnstile::config_cloudflareturnstile</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>CloudFlare Turnstile</label>
+
+                <field id="site_key" translate="label" type="obscure" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>CloudFlare Site Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="secret_key" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>CloudFlare Secret Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+             <group id="type_for" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                 <label>Storefront Visibility</label>
+                <field id="customer_login" translate="label" type="select" sortOrder="110" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Customer Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_forgot_password" translate="label" type="select" sortOrder="120" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Forgot Password</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_create" translate="label" type="select" sortOrder="130" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Create New Customer Account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_edit" translate="label" type="select" sortOrder="135" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Edit Customer Account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="contact" translate="label" type="select" sortOrder="140" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Contact Us</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_review" translate="label" type="select" sortOrder="150" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Product Review</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="place_order" translate="label" type="select" sortOrder="175" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Checkout/Placing Order</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="coupon_code" translate="label" type="select" sortOrder="200" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Coupon Codes</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="call_in_custom_form" translate="label" type="text" sortOrder="11" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>How to add in custom form</label>
+                 <field id="cutomFormAdd" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label><![CDATA[]]></label>
+                    <frontend_model>Webkul\CloudflareTurnstile\Block\Adminhtml\System\Config\Form\CustomFormInfo</frontend_model>
+                </field>
+            </group>
+            <group id="cloudflare_information" translate="label" type="text" sortOrder="11" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Cloudflare Turnstile Information</label>
+                 <field id="author" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label><![CDATA[]]></label>
+                    <frontend_model>Webkul\CloudflareTurnstile\Block\Adminhtml\System\Config\Form\ModuleInfo</frontend_model>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>

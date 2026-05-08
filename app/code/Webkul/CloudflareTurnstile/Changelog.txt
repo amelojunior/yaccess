@@ -1,0 +1,14 @@
+Legend
+
++ Features
+- Bugs
+-------------------------------- Version 2.0.0 --------------------------------------
+    + Compatible With Magento 2.3.x
+    + Cloudflare turnstile added at checkout page signin
+    + Customer login Cloudflare Turnstile Captcha added
+    + Forgot Password Cloudflare Turnstile Captcha added
+    + Contact Us Cloudflare Turnstile Captch added
+    + Sign Up Cloudflare Turnstile Captcha added
+    + Customer Edit Account Cloudflare Turnstile Captcha added
+    + Place order Cloudflare Turnstile Captcha added
+    + At apply coupon Cloudflare Turnstile Captcha added
