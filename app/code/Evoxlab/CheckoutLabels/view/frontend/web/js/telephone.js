@@ -11,12 +11,14 @@ define([
             validator.addRule(
                 'validate-cellphone',
                 function(value) {
-                    if (value) {
-                        return value.length >= 14;
-                    }
-                    return true;
+                    if (!value) return true;
+                    var digits = value.replace(/\D/g, '');
+                    if (digits.length < 10 || digits.length > 11) return false;
+                    // number after DDD must not start with 0 (PagBank: must be >= 10000000)
+                    var localNumber = parseInt(digits.substring(2), 10);
+                    return localNumber >= 10000000;
                 },
-                $.mage.__('Informe um número válido')
+                $.mage.__('Informe um número de telefone válido com DDD (ex: 11 99999-9999)')
             );
             return this;
         },

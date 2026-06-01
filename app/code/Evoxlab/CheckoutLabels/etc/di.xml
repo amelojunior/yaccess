@@ -7,4 +7,9 @@
                 type="Evoxlab\CheckoutLabels\Plugin\LayoutProcessorPlugin" sortOrder="10"/>
     </type>
 
+    <type name="PagBank\PaymentMagento\Gateway\Request\CustomerDataRequest">
+        <plugin name="evoxlab_checkoutlabels_pagbank_phone_validator"
+                type="Evoxlab\CheckoutLabels\Plugin\PagBankPhoneValidatorPlugin" sortOrder="10"/>
+    </type>
+
 </config>
