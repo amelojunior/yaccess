@@ -62,6 +62,8 @@ class LayoutProcessorPlugin
         foreach (['telephone', 'fax'] as $fieldName) {
             if (isset($fields[$fieldName])) {
                 $fields[$fieldName]['component'] = 'Evoxlab_CheckoutLabels/js/telephone';
+                $fields[$fieldName]['required'] = true;
+                $fields[$fieldName]['validation']['required-entry'] = true;
                 $fields[$fieldName]['validation']['validate-cellphone'] = true;
             }
         }
