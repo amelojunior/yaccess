@@ -3446,20 +3446,20 @@
         },
         {
             "name": "laminas/laminas-permissions-acl",
-            "version": "2.17.0",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-permissions-acl.git",
-                "reference": "96d710d0a8e6cfa781b2ba184a3dd397634ae2e7"
+                "reference": "5940f6e7b9e2e3eba671f13dd26e610d2fe9acc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-permissions-acl/zipball/96d710d0a8e6cfa781b2ba184a3dd397634ae2e7",
-                "reference": "96d710d0a8e6cfa781b2ba184a3dd397634ae2e7",
+                "url": "https://api.github.com/repos/laminas/laminas-permissions-acl/zipball/5940f6e7b9e2e3eba671f13dd26e610d2fe9acc3",
+                "reference": "5940f6e7b9e2e3eba671f13dd26e610d2fe9acc3",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "conflict": {
                 "laminas/laminas-servicemanager": "<3.0",
@@ -3469,9 +3469,9 @@
                 "laminas/laminas-coding-standard": "^3.0.1",
                 "laminas/laminas-servicemanager": "^3.21",
                 "phpbench/phpbench": "^1.2.10",
-                "phpunit/phpunit": "^10.5.38",
+                "phpunit/phpunit": "^10.5.58",
                 "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.26.1"
+                "vimeo/psalm": "^6.13.1"
             },
             "suggest": {
                 "laminas/laminas-servicemanager": "To support Laminas\\Permissions\\Acl\\Assertion\\AssertionManager plugin manager usage"
@@ -3506,7 +3506,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-11-25T10:38:49+00:00"
+            "time": "2025-11-03T09:15:20+00:00"
         },
         {
             "name": "laminas/laminas-recaptcha",
@@ -3576,33 +3576,33 @@
         },
         {
             "name": "laminas/laminas-router",
-            "version": "3.14.0",
+            "version": "3.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-router.git",
-                "reference": "5e1f5ca7fe95200661b50235c891ed3eee02d3f0"
+                "reference": "ec4b33834199bcf04c1b90b98c10f53c9e77e046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-router/zipball/5e1f5ca7fe95200661b50235c891ed3eee02d3f0",
-                "reference": "5e1f5ca7fe95200661b50235c891ed3eee02d3f0",
+                "url": "https://api.github.com/repos/laminas/laminas-router/zipball/ec4b33834199bcf04c1b90b98c10f53c9e77e046",
+                "reference": "ec4b33834199bcf04c1b90b98c10f53c9e77e046",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-http": "^2.15",
                 "laminas/laminas-servicemanager": "^3.14.0",
                 "laminas/laminas-stdlib": "^3.10.1",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "conflict": {
                 "zendframework/zend-router": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~2.5.0",
-                "laminas/laminas-i18n": "^2.29.0",
-                "phpunit/phpunit": "^10.5.36",
-                "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.26.1"
+                "laminas/laminas-coding-standard": "~3.1.0",
+                "laminas/laminas-http": "^2.22",
+                "laminas/laminas-i18n": "^2.31.0",
+                "phpunit/phpunit": "^11.5.43",
+                "psalm/plugin-phpunit": "^0.19.5",
+                "vimeo/psalm": "^6.13.1"
             },
             "suggest": {
                 "laminas/laminas-i18n": "^2.15.0 if defining translatable HTTP path segments"
@@ -3643,7 +3643,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-10-11T11:18:03+00:00"
+            "time": "2025-11-09T16:54:18+00:00"
         },
         {
             "name": "laminas/laminas-server",
@@ -19297,16 +19297,16 @@
         },
         {
             "name": "opensearch-project/opensearch-php",
-            "version": "2.4.5",
+            "version": "2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opensearch-project/opensearch-php.git",
-                "reference": "97e942dfac44d40d3db5b3c4a8656fe0d1e22294"
+                "reference": "eec5a78ade77337c6c630add63e8f90cdc2d337a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opensearch-project/opensearch-php/zipball/97e942dfac44d40d3db5b3c4a8656fe0d1e22294",
-                "reference": "97e942dfac44d40d3db5b3c4a8656fe0d1e22294",
+                "url": "https://api.github.com/repos/opensearch-project/opensearch-php/zipball/eec5a78ade77337c6c630add63e8f90cdc2d337a",
+                "reference": "eec5a78ade77337c6c630add63e8f90cdc2d337a",
                 "shasum": ""
             },
             "require": {
@@ -19375,9 +19375,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opensearch-project/opensearch-php/issues",
-                "source": "https://github.com/opensearch-project/opensearch-php/tree/2.4.5"
+                "source": "https://github.com/opensearch-project/opensearch-php/tree/2.4.6"
             },
-            "time": "2025-08-06T08:36:44+00:00"
+            "time": "2025-11-10T07:56:12+00:00"
         },
         {
             "name": "pagbank/payment-magento",

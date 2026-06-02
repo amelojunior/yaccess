@@ -366,6 +366,7 @@ return [
         'Mageplaza_Core' => 1,
         'Mageplaza_DeleteOrders' => 1,
         'Mageplaza_Smtp' => 1,
+        'MarkShust_PolyshellPatch' => 1,
         'MercadoPago_AdbPayment' => 1,
         'Evoxlab_Pagbank' => 1,
         'PayPal_Braintree' => 0,
@@ -374,6 +375,7 @@ return [
         'PayPal_BraintreeGiftCardAccount' => 0,
         'PayPal_BraintreeGiftWrapping' => 0,
         'PayPal_BraintreeGraphQl' => 0,
-        'PayPal_BraintreeReward' => 0
+        'PayPal_BraintreeReward' => 0,
+        'Webkul_CloudflareTurnstile' => 1
     ]
 ];
